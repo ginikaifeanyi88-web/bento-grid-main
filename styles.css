@@ -1,7 +1,7 @@
   body ul, li, h1, h2, a, p {
     margin: 0;
     padding: 0;
-    font-family: Outfit;
+    font-family:  DM Sans Thin;
    
 }
 body {
@@ -82,7 +82,7 @@ grid-row: span 3;
 }
 
 .grid-container > h1, h2, h3 {
-  font-weight: 500;
+  
 }
 
 .grid-container > div img {
