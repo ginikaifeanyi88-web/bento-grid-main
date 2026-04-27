@@ -85,6 +85,10 @@ grid-row: span 3;
   
 }
 
+.grid-container >div p {
+  font-size: 13px;
+}
+
 .grid-container > div img {
   object-fit: contain;
   width: 100%;
@@ -94,3 +98,27 @@ grid-row: span 3;
   color: hsl(256, 67%, 59%);
   font-style: italic;
  }
+
+ #socialmedia {
+    padding: 40px;
+ }
+
+ #socialmedia h1 {
+  color: white;
+  text-align: center;
+   font-size: 40px;
+ }
+
+ #socialmedia span {
+  color: hsl(39, 100%, 71%);
+ }
+
+  #socialmedia p{
+  color: white;
+  text-align: center;
+ }
+
+  #socialmedia img {
+    margin-top: 10px;
+    height: 25px;
+  }
