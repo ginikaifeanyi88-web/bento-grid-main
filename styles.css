@@ -213,7 +213,21 @@ float: left;
 }
 
 /* Tablet View */
-@media only screen and (min-width:820px) {
+@media only screen and (min-width:777px) {
+        .grid-container {
+  background-color: #f2f0f3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   gap: 20px;
+   height: 235vh;
+   width: 100%;
+    margin:0px auto;
+}
+}
+
+/* Tablet View */
+@media only screen and (min-width:916px) {
         .grid-container {
   background-color: #f2f0f3;
   display: grid;
