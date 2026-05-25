@@ -5,6 +5,13 @@
    
 }
 
+body {
+  height: 100vh; 
+  display: grid;
+  place-items: center;
+  background-color: #f2f0f3;
+}
+
 /* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
@@ -17,14 +24,6 @@
   --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
 }
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f2f0f3;
-}
   
   .attribution { 
     font-size: 0.6875rem; 
@@ -33,18 +32,15 @@ body {
     .attribution a { 
         color: hsl(228, 45%, 44%); 
     }
-main {
-    max-width: 900px; 
-    margin:60px auto;
-}
-.grid-container {
-  background-color: #f2f0f3;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-   grid-template-rows: repeat(10, 1fr);
-   gap: 25px;
-   height: 118vh;
-}
+
+          .grid-container {
+           background-color: #f2f0f3;
+          display: grid;
+          gap: 15px;
+         width: 100%; 
+          margin:0 auto;
+
+        }
 
 .grid-container > div {
   background-color: hsl(256, 67%, 59%);
@@ -56,57 +52,35 @@ main {
 }
 
 .grid-container > div:nth-child(1) {
-  grid-column: 3 / span 4;
   padding: 40px;
-  grid-row: 1 / span 4;
 }
 
 .grid-container > div:nth-child(2) {
-  grid-column: 3/ span 2;
-grid-row: 5 / span 3;
 background-color: hsl(0, 0%, 100%);
 }
 
 .grid-container > div:nth-child(3) {
-  grid-column: 5/ span 2;
-  grid-row: 5 / span 3;
   background-color:  hsl(39, 100%, 71%);
-  overflow: hidden;
 }
 
 .grid-container > div:nth-child(4) {
-  grid-column:7/  span 2;
-  grid-row: 1 / span 7;
   background-color: hsl(254, 88%, 90%);
-   overflow: hidden;
 }
 
 .grid-container > div:nth-child(5) {
-  grid-column: 5/span 4;
-  overflow: hidden;
-  grid-row: 8 / span 3;
 }
 
 .grid-container > div:nth-child(6) {
-  grid-column: 3/ span 2;
-  grid-row: 8 / span 3;
   background-color:  hsl(0, 0%, 100%);
-  overflow: hidden;
 }
 
 .grid-container > div:nth-child(7) {
-  grid-column: 1 / span 2;
-    grid-row: 1 / span 5;
     background-color:  hsl(31, 66%, 93%);
   padding: 55px 24px;
-  overflow: hidden;
 }
 
 .grid-container > div:nth-child(8) {
-  grid-column: 1/ span 2;
-  grid-row: 6/ span 5;
   background-color: hsl(39, 100%, 71%);
-  overflow: hidden;
 }
 
 .grid-container > h1, h2, h3 {
@@ -151,7 +125,7 @@ min-inline-size: 150px;
 
   #socialmedia img {
   max-inline-size: 45%;
-  min-inline-size: 150px;
+  min-inline-size: 180px;
 margin: auto;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -237,3 +211,74 @@ align-items: center;
   min-inline-size: 190px;
 float: left;
 }
+
+/* Tablet View */
+@media only screen and (min-width:820px) {
+        .grid-container {
+  background-color: #f2f0f3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   gap: 20px;
+   height: 170vh;
+   width: 100%;
+    margin:0px auto;
+}
+
+ }
+
+
+   /* Desktop View */
+      @media only screen and (min-width:1339px) {
+        .grid-container {
+  background-color: #f2f0f3;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+   grid-template-rows: repeat(10, 1fr);
+   gap: 25px;
+   height: 118vh;
+   max-width: 900px; 
+    margin:60px auto;
+}
+
+
+.grid-container > div:nth-child(1) {
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 4;
+}
+
+.grid-container > div:nth-child(2) {
+  grid-column: 3/ span 2;
+grid-row: 5 / span 3;
+}
+
+.grid-container > div:nth-child(3) {
+  grid-column: 5/ span 2;
+  grid-row: 5 / span 3;
+}
+
+.grid-container > div:nth-child(4) {
+  grid-column:7/  span 2;
+  grid-row: 1 / span 7;
+}
+
+.grid-container > div:nth-child(5) {
+  grid-column: 5/span 4;
+  grid-row: 8 / span 3;
+}
+
+.grid-container > div:nth-child(6) {
+  grid-column: 3/ span 2;
+  grid-row: 8 / span 3;
+}
+
+.grid-container > div:nth-child(7) {
+  grid-column: 1 / span 2;
+    grid-row: 1 / span 5;
+}
+
+.grid-container > div:nth-child(8) {
+  grid-column: 1/ span 2;
+  grid-row: 6/ span 5;
+}
+      }
